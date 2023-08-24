@@ -31,16 +31,16 @@ jobs:
       - name: Build and push the frontend Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./frontend
-          file: ./frontend/Dockerfile
+          context: ./front-end
+          file: ./front-end/Dockerfile
           push: true
           tags: ghcr.io/${{env.REPO_OWNER}}/${{env.REPO_NAME}}/front-end:latest
 
       - name: Build and push the backend Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./backend
-          file: ./backend/Dockerfile
+          context: ./back-end
+          file: ./back-end/Dockerfile
           push: true
           tags: ghcr.io/${{env.REPO_OWNER}}/${{env.REPO_NAME}}/back-end:latest
       - name: Trigger rebuild on Render
