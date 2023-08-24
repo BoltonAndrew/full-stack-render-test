@@ -47,4 +47,4 @@ jobs:
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}" \
           -H "Content-Type: application/json" \
-          https://api.render.com/v1/services/your-service-id/triggerDeploy
+          https://api.render.com/deploy/srv-cjjne4ephtvs7395m2sg?key=NdNI1V-lw6w

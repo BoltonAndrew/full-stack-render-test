@@ -8,6 +8,7 @@ function App() {
 
   async function createUser(e) {
     e.preventDefault();
+    console.log(import.meta.env.VITE_API);
     try {
       const res = await fetch(`${import.meta.env.VITE_API}user`, {
         method: "POST",
