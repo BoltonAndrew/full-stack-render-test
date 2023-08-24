@@ -34,6 +34,7 @@ jobs:
           file: ./front-end/Dockerfile
           push: true
           tags: ghcr.io/${{env.REPO_OWNER}}/front-end:latest
+          build-args: VITE_API=${{ secrets.VITE_API }}
 
       - name: Build and push the backend Docker image
         uses: docker/build-push-action@v2
