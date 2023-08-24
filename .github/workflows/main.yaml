@@ -34,7 +34,7 @@ jobs:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
-          tags: ghcr.io/$REPO_OWNER/$REPO_NAME/front-end:latest
+          tags: ghcr.io/${{env.REPO_OWNER}}/${{env.REPO_NAME}}/front-end:latest
 
       - name: Build and push the backend Docker image
         uses: docker/build-push-action@v2
@@ -42,7 +42,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ghcr.io/$REPO_OWNER/$REPO_NAME/back-end:latest
+          tags: ghcr.io/${{env.REPO_OWNER}}/${{env.REPO_NAME}}/back-end:latest
       - name: Trigger rebuild on Render
         run: |
           curl -X POST \
