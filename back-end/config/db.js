@@ -13,3 +13,4 @@ module.exports = {
   DataTypes,
   Model,
 };
+// Comment
