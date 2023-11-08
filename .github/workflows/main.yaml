@@ -49,11 +49,11 @@ jobs:
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}" \
           -H "Content-Type: application/json" \
-          https://api.render.com/deploy/srv-cjjne4ephtvs7395m2sg?key=NdNI1V-lw6w
+          https://api.render.com/deploy/srv-cjk81rj37aks73fhf4e0?key=20zJkch9FLE
 
       - name: Trigger Back-End rebuild on Render
         run: |
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.RENDER_API_TOKEN }}" \
           -H "Content-Type: application/json" \
-          https://api.render.com/deploy/srv-cjjnj0337aks73dinrg0?key=lqwKAd276Jg
+          https://api.render.com/deploy/srv-cjk82h337aks73fhin60?key=jugYJeOGi5o
