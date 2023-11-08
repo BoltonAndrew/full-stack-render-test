@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <h1>{user ? user.username : "No User"}</h1>
+      <h2>This form doesn't currently work, due to issues with SQLite in a production environment</h2>
       <form onSubmit={createUser}>
         <input onChange={({ target }) => setUsername(target.value)} />
         <input onChange={({ target }) => setPass(target.value)} />
